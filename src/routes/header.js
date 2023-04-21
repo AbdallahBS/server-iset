@@ -7,16 +7,10 @@ const multer = require('multer');
 const router = express.Router();
 const app= express();
 const mongoose = require('mongoose');
-var gridModule = express.Router();
-const {GridFsStorage} = require('multer-gridfs-storage');
-const { GridFSBucket } = require('mongodb');
 const Grid = require('gridfs-stream');
 const methodOverride = require('method-override');
 const conn = mongoose.connection;
 Grid.mongo = mongoose.mongo;
-const crypto = require('crypto');
-const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb+srv://root:admin@cluster0.7nvvbbc.mongodb.net/ecommerce?retryWrites=true&w=majority';
 //const {} = require('../controller/category');
 //init stream
 let gfs;
